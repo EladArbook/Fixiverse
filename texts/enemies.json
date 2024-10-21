@@ -1,0 +1,13 @@
+{
+	
+	
+	"enemy_damage": [
+		"cat: 1", "car: 2"
+		],
+	"enemy_random_direction": [
+		"car: 1"
+		],
+	
+		
+		
+}

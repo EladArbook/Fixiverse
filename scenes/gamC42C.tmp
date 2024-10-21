@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=3 uid="uid://cphwhvn0mjovo"]
+
+[ext_resource type="PackedScene" uid="uid://cyasf8uqqf0sr" path="res://scenes/player.tscn" id="1_07cha"]
+[ext_resource type="Texture2D" uid="uid://i2pn1sux5j3t" path="res://assets/Tiles/HomeTile.png" id="3_itygx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7xf3x"]
+size = Vector2(30, 30)
+
+[node name="Game" type="Node2D"]
+position = Vector2(-56, -25)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(56, 10)
+zoom = Vector2(4, 4)
+
+[node name="Player" parent="." instance=ExtResource("1_07cha")]
+z_index = 1
+position = Vector2(56, 25)
+speed = 50
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Player"]
+position = Vector2(0, -15)
+shape = SubResource("RectangleShape2D_7xf3x")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+z_index = -1
+offset_left = -88.0
+offset_top = -71.0
+offset_right = 200.0
+offset_bottom = 91.0
+texture = ExtResource("3_itygx")
+stretch_mode = 1

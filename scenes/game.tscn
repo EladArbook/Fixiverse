@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://cphwhvn0mjovo"]
+
+[ext_resource type="PackedScene" uid="uid://cyasf8uqqf0sr" path="res://scenes/player.tscn" id="1_07cha"]
+[ext_resource type="Script" path="res://scripts/game.gd" id="1_286o7"]
+[ext_resource type="PackedScene" uid="uid://4rrauke8pley" path="res://scenes/Main_Menu.tscn" id="2_qeid5"]
+[ext_resource type="PackedScene" uid="uid://bpjhv7k4uohip" path="res://scenes/skills_container.tscn" id="2_uctku"]
+[ext_resource type="PackedScene" uid="uid://b1ov4lllw5fkw" path="res://scenes/Levels/Level1.tscn" id="5_7buuu"]
+
+[node name="Game" type="Node2D"]
+process_mode = 3
+y_sort_enabled = true
+script = ExtResource("1_286o7")
+
+[node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="CanvasLayer"]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer/ParallaxBackground"]
+custom_minimum_size = Vector2(1, 2003)
+offset_left = -7274.0
+offset_top = -5352.0
+offset_right = 7298.0
+offset_bottom = 5415.0
+color = Color(0.270222, 0.270222, 0.270222, 1)
+
+[node name="Menu" parent="." instance=ExtResource("2_qeid5")]
+process_mode = 2
+visible = false
+z_index = 20
+
+[node name="pausable" type="Node2D" parent="."]
+process_mode = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="pausable"]
+position = Vector2(-291, -93)
+
+[node name="Player" parent="pausable" instance=ExtResource("1_07cha")]
+y_sort_enabled = false
+
+[node name="Level1" parent="pausable" instance=ExtResource("5_7buuu")]
+position = Vector2(447, -58)
+
+[node name="skills_container" parent="." instance=ExtResource("2_uctku")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+grow_horizontal = 1
+grow_vertical = 1

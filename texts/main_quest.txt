@@ -1,0 +1,50 @@
+Prologue:
+
+	~The mouse is standing in his house while suddenly the light bulb stopping to work~
+	~The mouse needs to go to the light_bulb and press 'space' to interact~
+	~The mouse is fixing the device by clicking the letter keys in they order~
+	~The mouse receives 10 Knowledge Pts, the KP is appearing on top left of the screen~
+	"There are so much to fix in the house, but so few of me...
+	*squeak*...
+	I better start working!"
+
+First Stage (cost: 10 KP):
+
+	~The mouse needs to go out from the building, through his door, encountering enemies and traps of all kinds~
+	~The mouse needs to reach the end of stage to find and interact with a new device~
+	~The mouse needs see the device's instructions and click the parts in they order~ ((starts from
+	here, only for learning a device for the first time))~
+	~The mouse is fixing the device by clicking the letter keys in they order~
+	~If the mouse fails in solving the riddle, he returns back to his home and needs to fix another
+	light_bulb for getting another 10 KPs~
+	~The mouse receives some kind of bonus (maybe learn abilities or get more KP)~
+
+
+When arrive home, after first mission's riddle:
+
+	~A crack in the wall is appeared, the mouse need to space it a little bit more by interacting few times and creating a hole in the wall~
+	~The mouse enter the crack and find a random room in the building~
+	~The mouse encountering unworking devices(burnt light bulbs and stopped watches for now)~
+	~The mouse is interacting with the devices and fixing them by click the letter-keys in they order~
+	~The mouse receives KPs for each device that he fixes~
+
+After fixing 3 devices:
+
+	"Not everything is easy to fix, don't be so cheesy. Go home and train your mouse skills to learn how to fix more complicated devices and solve harder riddles!"
+	~A mouse statue is appeared~
+	~The mouse can interact with the statues to trade KPs for upgrades~
+	~The mouse can get the running_skill for 25 ~
+
+After completing stage 2:
+	
+	~The mice over the building have heard about your fixing skills and asks you to fix devices for them~
+
+Main game:
+
+	~Main stages: go out from the building, discover the outside world, encountering enemies and
+	traps of all kinds in a search of new knowledge (cost KPs)~
+	~The mouse hole: go for a search in the building after unworking devices. Fixing them for Knowledge Points~
+	~The Mouse Status: discover the Knowledge Tree for upgrading mouse's fixing skills(time, buttons, KPs from
+	fixes), Journey skills, , buffs and more~
+	~Sub quests: finding mice's devices and fix those for them for getting a big reward~
+	~Hidden content: enemy that needs to be fix, riddled rooms with loot inside~

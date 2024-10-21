@@ -1,0 +1,121 @@
+[gd_scene load_steps=14 format=3 uid="uid://i7ccp4njwa3u"]
+
+[ext_resource type="Script" path="res://scripts/car_north.gd" id="1_7xasc"]
+[ext_resource type="Texture2D" uid="uid://cefkttotbxbut" path="res://assets/cars/Red_Civic/MOVE/SOUTH/Red_CIVIC_CLEAN_SOUTH_000-sheet.png" id="2_tmowa"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4446u"]
+atlas = ExtResource("2_tmowa")
+region = Rect2(400, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jgasq"]
+atlas = ExtResource("2_tmowa")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qv2sv"]
+atlas = ExtResource("2_tmowa")
+region = Rect2(600, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vsv6t"]
+atlas = ExtResource("2_tmowa")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ahx4j"]
+atlas = ExtResource("2_tmowa")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ikgn"]
+atlas = ExtResource("2_tmowa")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jukoq"]
+atlas = ExtResource("2_tmowa")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qxqlt"]
+atlas = ExtResource("2_tmowa")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l4uqf"]
+atlas = ExtResource("2_tmowa")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4kjbu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4446u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jgasq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qv2sv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vsv6t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4446u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jgasq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qv2sv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vsv6t")
+}],
+"loop": false,
+"name": &"alert",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ahx4j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ikgn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jukoq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qxqlt")
+}],
+"loop": true,
+"name": &"drive",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l4uqf")
+}],
+"loop": true,
+"name": &"park",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kava0"]
+size = Vector2(30, 44)
+
+[node name="car_north" type="RigidBody2D" groups=["enemy"]]
+z_index = 1
+collision_layer = 4
+collision_mask = 0
+mass = 1000.0
+gravity_scale = 0.0
+lock_rotation = true
+script = ExtResource("1_7xasc")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_4kjbu")
+animation = &"alert"
+frame = 7
+frame_progress = 1.0
+
+[node name="damage_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="damage_area"]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_kava0")

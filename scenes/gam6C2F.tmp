@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://cphwhvn0mjovo"]
+
+[ext_resource type="PackedScene" uid="uid://cyasf8uqqf0sr" path="res://scenes/player.tscn" id="1_07cha"]
+[ext_resource type="Script" path="res://scripts/game_manager.gd" id="3_rfltd"]
+[ext_resource type="PackedScene" uid="uid://b1ov4lllw5fkw" path="res://scenes/Levels/Level1.tscn" id="4_3mnk0"]
+
+[node name="Game" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Levels" type="Node2D" parent="."]
+
+[node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("3_rfltd")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-291, -93)
+
+[node name="Player" parent="." instance=ExtResource("1_07cha")]
+
+[node name="Level1" parent="." instance=ExtResource("4_3mnk0")]
+z_index = 0

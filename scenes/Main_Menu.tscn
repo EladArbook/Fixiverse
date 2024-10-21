@@ -1,0 +1,106 @@
+[gd_scene load_steps=4 format=3 uid="uid://4rrauke8pley"]
+
+[ext_resource type="Script" path="res://scripts/save_modal.gd" id="1_83lh0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_h1r8f"]
+bg_color = Color(0.458405, 0.458405, 0.458405, 0.882353)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_nrjxp"]
+
+[node name="Main_Menu" type="Node2D"]
+
+[node name="menu_modal" type="Control" parent="."]
+process_mode = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_83lh0")
+
+[node name="ColorRect" type="ColorRect" parent="menu_modal"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -264.0
+offset_top = -256.0
+offset_right = 264.0
+offset_bottom = 200.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.4)
+
+[node name="modal" type="PanelContainer" parent="menu_modal"]
+custom_minimum_size = Vector2(128, 64)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -68.0
+offset_top = -171.0
+offset_right = 93.0
+offset_bottom = 43.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_h1r8f")
+
+[node name="MarginContainer" type="MarginContainer" parent="menu_modal/modal"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="menu_modal/modal/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 8
+
+[node name="Save_Label" type="Label" parent="menu_modal/modal/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+material = SubResource("CanvasItemMaterial_nrjxp")
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.564962, 0.564962, 0.564962, 1)
+text = "Continue"
+
+[node name="Save_Label3" type="Label" parent="menu_modal/modal/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+text = "New Game"
+
+[node name="Save_Label2" type="Label" parent="menu_modal/modal/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Controls"
+
+[node name="Save_Label4" type="Label" parent="menu_modal/modal/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Quit"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="menu_modal/modal/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+alignment = 1
+
+[node name="cancel" type="Button" parent="menu_modal/modal/MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+text = "resume"
