@@ -40,11 +40,13 @@ func engage() -> void:
 	animated_sprite.play("wake_up")
 	#cat_shape.set_deferred("disabled", false)
 
+
 func _on_cat_waked_up() -> void:
 	animated_sprite.disconnect("animation_finished", _on_cat_waked_up)
 	animated_sprite.connect("animation_finished", _cat_stays_engaged)
 	animated_sprite.play("engage")
 	linear_velocity = Vector2(-150,0)
+	
 	
 func _cat_stays_engaged() -> void:
 	animated_sprite.disconnect("animation_finished", _cat_stays_engaged)
@@ -52,12 +54,14 @@ func _cat_stays_engaged() -> void:
 	animated_sprite.play("stay_engaged")
 	linear_velocity = Vector2(0,0)
 
+
 func _cat_goes_back() -> void:
 	animated_sprite.disconnect("animation_finished", _cat_goes_back)
 	animated_sprite.flip_h = false
 	linear_velocity = Vector2(20,0)
 	animated_sprite.connect("animation_finished", _cat_sit_down)
 	animated_sprite.play("walk")
+
 
 func _cat_sit_down() -> void:
 		animated_sprite.disconnect("animation_finished", _cat_sit_down)
@@ -67,11 +71,13 @@ func _cat_sit_down() -> void:
 		animated_sprite.play("sit_down")
 		animated_sprite.connect("animation_finished", _cat_lie_down)
 
+
 func _cat_lie_down() -> void:
 	animated_sprite.disconnect("animation_finished", _cat_lie_down)
 	animated_sprite.connect("animation_finished", _cat_go_sleep)
 	animated_sprite.play("lie_down")
 	#cat_shape.set_deferred("disabled", true)
+
 
 func _cat_go_sleep() -> void:
 	animated_sprite.disconnect("animation_finished", _cat_go_sleep)
