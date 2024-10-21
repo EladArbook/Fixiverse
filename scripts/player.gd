@@ -42,11 +42,11 @@ func _process(delta) -> void:
 	if Input.is_action_just_pressed("running_skill"):
 		if running_skill:
 			running_skill = false
-			get_node("%running_skill").theme = skills_off_theme
+			#get_node("%running_skill").theme = skills_off_theme
 			speed = 60
 		else:
 			running_skill = true
-			get_node("%running_skill").theme = skills_on_theme
+			#get_node("%running_skill").theme = skills_on_theme
 			speed = 90
 	kp_label.text = str(GlobalVariables.knowledge_points) + "kp"
 	
