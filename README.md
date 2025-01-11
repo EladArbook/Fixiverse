@@ -12,3 +12,8 @@ Upgrade your character, earn knowledge points, and become the ultimate fixer in 
      |\)   (/|/    
      \   '   /   
       (/---\)   
+
+
+
+
+*All credits for the resources and assets used in the development of Fixiverse will be acknowledged in the game's credits and available on GitHub upon completion.
